@@ -1,0 +1,32 @@
+{% extends "layout.html" %} <!-- Kalıtım yoluyla <body> harici her şey layout kısmından alınır. -->
+
+{% block body %}
+<!-- Slide Show -->
+<section>
+  <img class="mySlides" src="{{ url_for('static', filename = 'img/blog1.jpg') }}"
+  style="width:100%">
+  <img class="mySlides" src="{{ url_for('static', filename = 'img/blog2.jpg') }}"
+  style="width:100%">
+  <img class="mySlides" src="{{ url_for('static', filename = 'img/blog3.jpg') }}"
+  style="width:100%">
+</section>
+
+<!-- Band Description -->
+<section class="w3-container w3-center w3-content" style="max-width:600px">
+  <h2 class="w3-wide">BLOG PAYLAŞMA SİTESİ</h2>
+  <p class="w3-opacity"><i>Öğren - Paylaş - Kendini Geliştir</i></p>
+  <p class="w3-justify">Bu sitede geliştiricilerin paylaştığı makaleleri okuyarak işinize yarabilecek bilgileri öğrenerek kendinizi geliştirebilir, insanlara fayda sağlayacağını düşündüğünüz konular hakkında makaleler paylaşabilir ve bu sitenin her zaman başvurabileceğiniz, dinamik bir geliştirme ortamına dönüşmesini sağlayabilirsiniz. </p>
+</section>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-black w3-xlarge">
+  <a href="https://twitter.com/_hosoyon" target="_blank"><i class="fa fa-twitter"></i></a>
+  <a href="https://www.linkedin.com/in/h%C3%BCseyin-avc%C4%B1-42a252179/"target="_blank"><i class="fa fa-linkedin"></i></a>
+  <a href="https://github.com/avci-huseyin" target="_blank"><i class="fa fa-github"></i></a>
+  <p class="w3-medium">
+  <i class="fa fa-copyright"></i> Hüseyin Avcı
+  </p>
+</footer>
+
+
+{% endblock  %}

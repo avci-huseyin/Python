@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+<!-- Makale geldi -->
+{% if article %}
+
+<h4>{{article.title}}</h4>
+<hr>
+
+Yazar : {{article.author}}
+<hr>
+
+Tarih : {{article.created_date}}
+<hr>
+
+<!-- Makaleyi oluştururken CKEDITOR kullandık ve makalemiz html dökümanı olarak veritabanına kaydedildi. -->
+{{article.content|safe}} <!-- html dökümanını normal bir şekilde gösterebilmek için Jinja Template'in filtreleme özelliği kullanıldı => |SAFE -->
+
+<!-- Makale gelmedi -->
+{% else %}
+
+<div class = "alert alert-warning">
+    Böyle bir makale bulunmuyor...
+</div>
+{% endif %}
+
+{% endblock body %}

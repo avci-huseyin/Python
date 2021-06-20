@@ -1,0 +1,13 @@
+{% extends "layout.html" %} <!-- Kalıtım yoluyla <body> harici her şey layout kısmından alınır. -->
+
+{% block css %}
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/aboutStyle.css') }}">
+{% endblock css %}
+
+{% block body %}
+<div class="about-section">
+  <h1>HAKKIMDA</h1>
+  <p style="text-align: justify">Herkese merhaba. Ben Hüseyin Avcı. KAEU Bilgisayar Mühendisliği 3.sınıf öğrencisiyim. Bu BlogPost'u kendimi geliştirmek amacıyla oluşturdum. Bugüne kadar eğitimini almış olduğum, sözel kısımları daha ağır basan konuları makaleler oluşturarak bu konular hakkında bilgi sahibi olmak isteyen insanlarla paylaşmanın güzel olabileceğini düşündüm. Sizler de makalelerinizi burada paylaşarak hem diğer insanlara katkıda bulunabilir hem de insanların faydalanabileceği bir ortamın geliştirilmesinde bir katkı sağlayabilirsiniz.<br>Teşekkürler.</p>
+</div>
+
+{% endblock body %}
